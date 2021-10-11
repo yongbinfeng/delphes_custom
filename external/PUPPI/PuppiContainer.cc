@@ -44,7 +44,7 @@ void PuppiContainer::initialize(const std::vector<RecoObj> &iRecoObjects) {
   //if(fNPV < 10) fNPV = 80.;
   if(fPVFrac != 0) { fPVFrac = double(fChargedPV.size())/fPVFrac;}
   else { fPVFrac = 0;}
-  std::cout << "Charged Particle PV " << fChargedPV.size() << " Charged PU particle " << fPVFrac << std::endl;
+  //std::cout << "Charged Particle PV " << fChargedPV.size() << " Charged PU particle " << fPVFrac << std::endl;
 }
 PuppiContainer::~PuppiContainer(){}
 

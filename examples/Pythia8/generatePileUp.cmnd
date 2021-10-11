@@ -13,14 +13,15 @@ Init:showChangedSettings = on      ! list changed settings
 Init:showAllSettings = off         ! list all settings
 Init:showChangedParticleData = on  ! list changed particle data
 Init:showAllParticleData = off     ! list all particle data
-Next:numberCount = 5            ! print message every n events
+Next:numberCount = 1000            ! print message every n events
 Next:numberShowLHA = 1             ! print LHA information n times
 Next:numberShowInfo = 1            ! print event information n times
 Next:numberShowProcess = 1         ! print process record n times
 Next:numberShowEvent = 1           ! print event record n times
 Stat:showPartonLevel = on          ! additional statistics on MPI
+
 Random:setSeed = on
-Random:setSeed = 10
+Random:seed = 0
 
 ! 3) Beam parameter settings. Values below agree with default ones.
 Beams:idA = 2212                   ! first beam, p = 2212, pbar = -2212
