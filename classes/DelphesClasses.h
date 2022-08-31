@@ -563,6 +563,8 @@ public:
 
   Int_t IsPU;
   Int_t IsRecoPU;
+  Float_t PuppiWeight; // PUPPI weights for particle flow candidate
+
   Float_t ETruth;
   Float_t ETruthLV;
   Float_t ETruthPU;

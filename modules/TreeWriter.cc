@@ -509,6 +509,8 @@ void TreeWriter::ProcessParticleFlowCandidates(ExRootTreeBranch *branch, TObjArr
 
     entry->IsPU = candidate->IsPU;
     entry->IsRecoPU = candidate->IsRecoPU;
+    entry->PuppiWeight = candidate->PuppiWeight;
+
     entry->ETruth = candidate->ETruth;
     entry->ETruthLV = candidate->ETruthLV;
     entry->ETruthPU = candidate->ETruthPU;
@@ -573,6 +575,11 @@ void TreeWriter::ProcessParticleFlowCandidates(ExRootTreeBranch *branch, TObjArr
     phi = momentum.Phi();
     m = momentum.M();
     ctgTheta = (TMath::Tan(momentum.Theta()) != 0) ? 1 / TMath::Tan(momentum.Theta()) : 1e10;
+
+    cosTheta = TMath::Abs(momentum.CosTheta());
+    signz = (momentum.Pz() >= 0.0) ? 1.0 : -1.0;
+    eta = (cosTheta == 1.0 ? signz * 999.9 : momentum.Eta());
+    rapidity = (cosTheta == 1.0 ? signz * 999.9 : momentum.Rapidity());
 
     entry->E = e;
     entry->P = p;
