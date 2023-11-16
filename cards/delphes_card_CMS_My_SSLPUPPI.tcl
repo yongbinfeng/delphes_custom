@@ -26,10 +26,10 @@ module PileUpMerger PileUpMerger {
   set VertexOutputArray vertices
 
   # pre-generated minbias input file
-  set PileUpFile MinBiasMy_1M.pileup
+  set PileUpFile MinBiasMy_5K.pileup
 
   # average expected pile up
-  set MeanPileUp 80
+  set MeanPileUp 200
 
    # maximum spread in the beam direction in m
   set ZVertexSpread 0.25

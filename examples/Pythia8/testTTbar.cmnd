@@ -1,0 +1,50 @@
+# Base
+Beams:idA = 2212                   ! first beam, p = 2212, pbar = -2212
+Beams:idB = 2212                   ! second beam, p = 2212, pbar = -2212
+Beams:eCM = 13000.                 ! CM energy of collision
+Main:numberOfEvents = 10          ! number of events to generate
+
+# Random seed based on time
+Random:setSeed = on
+Random:seed = 0
+
+# Common
+Tune:preferLHAPDF = 2
+Main:timesAllowErrors = 10000
+Check:epTolErr = 0.01
+Beams:setProductionScalesFromLHEF = off
+SLHA:minMassSM = 1000.
+ParticleDecays:limitTau0 = on
+ParticleDecays:tau0Max = 10
+ParticleDecays:allowPhotonRadiation = on
+
+# CP5
+Tune:pp 14
+Tune:ee 7
+MultipartonInteractions:ecmPow=0.03344
+MultipartonInteractions:bProfile=2
+MultipartonInteractions:pT0Ref=1.41
+MultipartonInteractions:coreRadius=0.7634
+MultipartonInteractions:coreFraction=0.63
+ColourReconnection:range=5.176
+SigmaTotal:zeroAXB=off
+SpaceShower:alphaSorder=2
+SpaceShower:alphaSvalue=0.118
+SigmaProcess:alphaSvalue=0.118
+SigmaProcess:alphaSorder=2
+MultipartonInteractions:alphaSvalue=0.118
+MultipartonInteractions:alphaSorder=2
+TimeShower:alphaSorder=2
+TimeShower:alphaSvalue=0.118
+SigmaTotal:mode = 0
+SigmaTotal:sigmaEl = 21.89
+SigmaTotal:sigmaTot = 100.309
+
+# Process setup: ttbar (no single top)
+Top:gg2ttbar   = on
+Top:gg2ttbar   = on
+Top:gmgm2ttbar = on  ! Photon-initiated (only if PDF contains photons)
+
+# Use this for lepton pair invariant mass in a certain mHat window
+PhaseSpace:mHatMin = 50   # min mHat
+#PhaseSpace:mHatMax = 120   # max mHat
